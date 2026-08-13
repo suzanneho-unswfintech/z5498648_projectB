@@ -1,0 +1,11 @@
+sector,total_headlines,n_days_with_news,n_days,pct_days_with_news,pct_of_headlines
+Tech,26638,1006,1006,1.0,0.1814
+Consumer,25877,998,1006,0.992,0.1762
+Energy,19365,996,1006,0.9901,0.1319
+Financials,18269,998,1006,0.992,0.1244
+Healthcare,14697,997,1006,0.9911,0.1001
+Industrials,13156,998,1006,0.992,0.0896
+Comm,11783,997,1006,0.9911,0.0802
+Utilities,6319,962,1006,0.9563,0.043
+Materials,5393,940,1006,0.9344,0.0367
+RealEstate,5339,940,1006,0.9344,0.0364

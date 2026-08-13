@@ -1,0 +1,9 @@
+statistic,vader,finvader
+n_headlines,146836.0,146836.0
+pct_neutral,0.4885,0.1686
+pct_nonneutral,0.5115,0.8314
+mean_compound,0.1056,0.0692
+std_compound,0.2881,0.2406
+pearson_corr_vader_finvader,0.6037,0.6037
+vader_neutral_finvader_signed,0.3275,0.3275
+sign_flip_between_models,0.0528,0.0528
