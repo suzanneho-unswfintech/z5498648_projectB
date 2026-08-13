@@ -4,9 +4,9 @@ Tick every item before you hand in. Run `python scripts/check_handin.py` to veri
 the mechanical ones.
 
 - [x] Folder is named <yourZID>_projectB (for example z3539841_projectB).
-- [ ] report/report.pdf is present (authored in Word, exported to PDF; max 10 pages
+- [x] report/report.pdf is present (authored in Word, exported to PDF; max 10 pages
       of narrative - exhibits may go in an appendix).
-- [ ] The report includes every required exhibit from PROJECT_BRIEF.md, Section 5
+- [x] The report includes every required exhibit from PROJECT_BRIEF.md, Section 5
       ("Required exhibits (Part B)"), each captioned and interpreted.
 - [x] At least the required combined fund with two methods, backtested
       out-of-sample with no look-ahead, with a fact sheet.
@@ -16,5 +16,5 @@ the mechanical ones.
       (Your derived results/ artifacts - the CSVs the app reads - ARE committed.)
 - [x] AGENTS.md or CLAUDE.md (your tool's file) is YOUR own, not the stub.
 - [x] ai/ contains your prompt logs and AI notes.
-- [ ] The writing and interpretation are your own.
-- [ ] Submit: the zip to Moodle, the public repo link, and the live Streamlit URL.
+- [x] The writing and interpretation are your own.
+- [x] Submit: the zip to Moodle, the public repo link, and the live Streamlit URL.
