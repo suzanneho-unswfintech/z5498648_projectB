@@ -48,7 +48,7 @@ data files.
 Per the tutor's instruction, the live links are repeated here and on Page 1 of the
 report.
 
-- Public Streamlit app URL: TODO (deploy after this repo is made public)
+- Public Streamlit app URL: https://z5498648projectb-dmdfgdjzslx3tyhnevhadq.streamlit.app/
 - Public GitHub repository URL: https://github.com/suzanneho-unswfintech/z5498648_projectB
 - Branch: `main`
 - Final commit hash: TODO (update after the last push before hand-in)
