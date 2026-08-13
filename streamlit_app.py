@@ -195,18 +195,14 @@ def page_home() -> None:
         "**diversified** (equity + crypto) universes. Pick an objective, then "
         "open a universe to see how it performed."
     )
-    cols = st.columns(len(OBJECTIVES))
-    for col, obj in zip(cols, OBJECTIVES):
-        with col:
+    for obj in OBJECTIVES:
+        card_col, action_col = st.columns([0.8, 0.2], vertical_alignment="center")
+        with card_col:
             st.markdown(
-                as_.fund_card_html(
-                    obj["name"],
-                    f"Technical method: {obj['method']}",
-                    obj["desc"],
-                    footer="Available in: - " + " - ".join(obj["universes"]),
-                ),
+                as_.objective_card_html(obj["name"], obj["method"], obj["desc"], obj["universes"]),
                 unsafe_allow_html=True,
             )
+        with action_col:
             st.button(
                 "View funds",
                 key=f"home_{obj['method']}_view",

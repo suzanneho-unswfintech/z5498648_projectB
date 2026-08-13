@@ -132,6 +132,41 @@ h1, h2, h3, h4 {
 .ever-fund .fsub { font-size: 0.8rem; color: #7a7264; margin: 0.1rem 0 0.35rem; }
 .ever-fund .fdesc { font-size: 0.88rem; line-height: 1.45; color: var(--ever-text); }
 .ever-fund .funi { font-size: 0.82rem; color: #7a7264; margin-top: 0.4rem; }
+.ever-fund--row {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.ever-objective {
+  min-height: 8.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+[data-testid="stHorizontalBlock"]:has(.ever-objective) {
+  background: var(--ever-card);
+  border: 1px solid var(--ever-line);
+  border-left: 4px solid var(--ever-burgundy);
+  border-radius: 6px;
+  padding: 0.9rem 1.15rem;
+  box-shadow: 0 2px 6px rgba(51, 51, 51, 0.06);
+  margin-bottom: 0.8rem;
+}
+.ever-badge {
+  display: inline-block;
+  background: rgba(123, 30, 61, 0.08);
+  color: var(--ever-burgundy);
+  border: 1px solid rgba(123, 30, 61, 0.22);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.15rem 0.6rem;
+  margin-right: 0.35rem;
+}
 </style>
 """.replace("__FONT_HEAD__", FONT_HEAD).replace("__FONT_BODY__", FONT_BODY)
 
@@ -177,6 +212,23 @@ def fund_card_html(name: str, subtitle: str, desc: str, footer: str = "") -> str
     return (
         f'<div class="ever-fund"><div class="fname">{name}</div>'
         f'<div class="fsub">{subtitle}</div>{desc_html}{foot_html}</div>'
+    )
+
+
+def objective_card_html(name: str, method: str, desc: str, universes: list[str]) -> str:
+    """Render one full-width objective card (name / method / blurb / universe badges).
+
+    The surrounding columns row is styled as the card surface (white background,
+    burgundy left border) via `.ever-objective`; this div only carries the text.
+    """
+    badges = "".join(f'<span class="ever-badge">{u}</span>' for u in universes)
+    return (
+        f'<div class="ever-fund ever-fund--row ever-objective">'
+        f'<div class="fname">{name}</div>'
+        f'<div class="fsub">Technical method: {method}</div>'
+        f'<div class="fdesc">{desc}</div>'
+        f'<div class="funi">Available in: {badges}</div>'
+        f"</div>"
     )
 
 
